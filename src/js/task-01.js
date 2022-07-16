@@ -2,6 +2,7 @@ const listItem = () => {
     return document.querySelectorAll('.item').length;
 }
 console.log(`Number of categories: ${listItem()}`);
+
 const titleItem = () => {
     const items = document.querySelectorAll('.item');
     for (const item of items) {

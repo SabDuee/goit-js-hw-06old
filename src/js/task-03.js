@@ -12,3 +12,14 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+const newItemGallery = (images) => {
+    const list = document.querySelector('.gallery')
+    let htmlText = '';
+
+    for(const image of images){
+      htmlText += `<li class="gallery__item" > <img src="${image.url}" alt="${image.alt}" width="300px"></li>`;
+    }
+    list.setAttribute('style', "display: flex; list-style-type: none;");
+    list.insertAdjacentHTML('beforeend',htmlText);
+}
+newItemGallery(images);
